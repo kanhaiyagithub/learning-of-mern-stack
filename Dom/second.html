@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Element</title>
+</head>
+<body>
+    <!-- how we can add the element  -->
+     <div id="Container"></div>
+     <button onclick="addElement()">Add Element</button>
+     <script>
+        function addElement(){
+            const div = document.getElementById("Container")
+            const newPara = document.createElement("p")
+            newPara.textContent = "New paragraph added"
+            div.appendChild(newPara);
+        }
+     </script>
+
+
+<!-- how we can remove the element  -->
+<div>
+    <p id="para">Remove me!</p>
+    <button onclick="removeElement()">Remove Element</button>
+</div>
+<script>
+    function removeElement(){
+        const para = document.getElementById("para")
+        para.remove()
+    }
+</script>
+
+
+<!-- how we can toggle the class  -->
+<p id="toggleDemo" class="blue">Toggle my color!</p>
+<button onclick="toggleClass()">Toggle Class</button>
+<style>
+    .blue {color: blue}
+    .red {color: red}
+</style>
+<script>
+    function toggleClass(){
+        const p = document.getElementById("toggleDemo")
+        p.classList.toggle("red")
+    }
+</script>
+
+<ul>
+  <li class="item">Item 1</li>
+  <li class="item">Item 2</li>
+  <li class="item">Item 3</li>
+</ul>
+<button onclick="updateItems()">Update Items</button>
+
+<script>
+function updateItems() {
+  const items = document.querySelectorAll(".item");
+  items.forEach((el, i) => el.textContent = `Updated Item ${i+1}`);
+}
+</script>
+
+
+</body>
+</html>

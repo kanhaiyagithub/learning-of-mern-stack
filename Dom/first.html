@@ -1,0 +1,27 @@
+<p id="demo">Hello World</p>
+<button onclick="changeText()">Change Text</button>
+
+<script>
+function changeText() {
+  document.getElementById("demo").textContent = "Text Changed!";
+}
+</script>
+
+<p id = "styleDemo">Style me</p>
+<button onclick="changeStyle()">Change Style</button>
+<script>
+  function changeStyle(){
+    const p = document.getElementById('styleDemo')
+    p.style.color ='blue'
+    p.style.fontSize = '30px'
+  }
+</script>
+
+<p id = "Hello">Hello World </p>
+<button onclick="changePext()">change Text</button>
+<script>
+  function changePext(){
+ document.getElementById('Hello').textContent="changed Texts"
+
+  }
+</script>
