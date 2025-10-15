@@ -61,5 +61,49 @@ function updateItems() {
 </script>
 
 
+
+
+<button onclick="createTable()">Create Table</button>
+<div id="tableContainer"></div>
+
+<script>
+function createTable() {
+  const container = document.getElementById("tableContainer");
+  const table = document.createElement("table");
+  table.border = 1;
+
+  for(let i=1; i<=3; i++){
+    const row = document.createElement("tr");
+    for(let j=1; j<=3; j++){
+      const cell = document.createElement("td");
+      cell.textContent = `Row ${i} Col ${j}`;
+      row.appendChild(cell);
+    }
+    table.appendChild(row);
+  }
+
+  container.innerHTML = ""; // clear old table
+  container.appendChild(table);
+}
+</script>
+
+
+
+<ul id="list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+document.getElementById("list").addEventListener("click", (e) => {
+  if(e.target.tagName === "LI") {
+    alert(`You clicked: ${e.target.textContent}`);
+  }
+});
+</script>
+
+
+
 </body>
 </html>
